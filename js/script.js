@@ -1,3 +1,5 @@
+document.getElementById('comment-date').valueAsNumber = Date.now();
+
 let comments = [];
 loadComments();
 
@@ -22,6 +24,7 @@ document.getElementById('comment-add').onclick = function () {
    userName.value = '';
    commentText.value = '';
    commentDate.value = '';
+   commentDate.valueAsNumber = Date.now();
 
    comments.push(comment);
 
@@ -37,6 +40,7 @@ document.getElementById('comment-clear').onclick = function () {
    userName.value = '';
    commentText.value = '';
    commentDate.value = '';
+   commentDate.valueAsNumber = Date.now();
 
    clearErrorMessage(userName);
    clearErrorMessage(commentText);
